@@ -14,3 +14,24 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
 # **Вывод:** Парам пам-пам
 
+VOWELS = "аоуэыяёюеи"
+
+
+def count_vowels(text):
+    count = 0
+    for ch in text:
+        if ch in VOWELS:
+            count += 1
+    return count
+
+
+def check_text(vowels, text):
+    c_vow = set(map(vowels, text.split()))
+    if len(c_vow) == 1:
+        return "Парам пам-пам"
+    else:
+        return "Пам парам"
+
+
+text = input("Введите песенку Винни-пуха: ")
+print(check_text(count_vowels, text))
