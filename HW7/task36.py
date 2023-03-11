@@ -10,9 +10,5 @@
 # Sample Output:
 # ((house, дом), (car, машина), (men, человек), (tree, дерево))
 
-def split_to_tuple(text):
-    return tuple(text.split("="))
-
-
 text = input("Введит текст: ")
-print(list(map(split_to_tuple, text.split())))
+print(list(map(lambda ch: tuple(ch.split("=")), text.split())))
